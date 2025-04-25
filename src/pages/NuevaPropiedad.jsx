@@ -86,7 +86,14 @@ export default function NuevaPropiedad() {
   };
 
   return (
-    <LayoutForm>
+
+    <div
+    className="min-h-screen bg-cover  bg-center relative flex items-center justify-center px-4"
+    style={{ backgroundImage: "url('/img/bienesraices.webp')" }}
+  >
+    <div className="absolute inset-0 bg-black/60 z-0" />
+    <div className="relative z-10 bg-white/10 backdrop-blur-sm p-8 rounded-2xl shadow-lg w-full max-w-md md:max-w-xl text-white">
+     
       <div className="my-8">
         <h2 className="text-2xl font-bold text-center mb-6">Nueva Propiedad</h2>
         {mensaje && (
@@ -95,7 +102,7 @@ export default function NuevaPropiedad() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4 text-white">
+        <form onSubmit={handleSubmit} className="gap-4 text-white">
           <label htmlFor="nombre" className="block text-sm mb-1">Nombre</label>
           <input type="text" name="nombre" placeholder="Nombre" value={form.nombre} onChange={handleChange} className="input" required />
           
@@ -184,7 +191,7 @@ export default function NuevaPropiedad() {
           <label className="block text-sm mb-1">Archivos adjuntos</label>
           <input type="file" multiple onChange={handleAdjuntosChange} className="input" />
 
-          <button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 py-2 px-4 rounded-md font-bold">
+          <button type="submit" className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 py-2 px-4 rounded-md font-bold">
             Guardar Propiedad
           </button>
           <button
@@ -195,7 +202,12 @@ export default function NuevaPropiedad() {
             Cancelar y volver
           </button>
         </form>
+
+        
       </div>
-    </LayoutForm>
+    </div>
+  </div>
+    
+    
   );
 }
