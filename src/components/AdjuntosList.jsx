@@ -15,7 +15,7 @@ export default function AdjuntosList({ adjuntos, onEliminar }) {
               className="flex  items-center justify-between bg-white/10 px-4 py-2 rounded-md border border-white/20 text-white"
             >
               <a
-                href={`http://localhost:3000/${file.ruta_archivo}`}
+                href={`https://realnexor.com/${file.ruta_archivo}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline flex-1 truncate text-emerald-700"

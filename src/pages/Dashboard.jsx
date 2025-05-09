@@ -11,7 +11,7 @@ export default function Dashboard() {
     setUsuario(storedUser);
 
     const fetchPropiedades = async () => {
-      const res = await fetch("http://localhost:3000/api/propiedades", {
+      const res = await fetch("https://realnexor.com/api/propiedades", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -26,7 +26,7 @@ export default function Dashboard() {
 
 
   const eliminarPropiedad = async (id) => {
-    const res = await fetch(`http://localhost:3000/api/propiedades/${id}`, {
+    const res = await fetch(`https://realnexor.com/api/propiedades/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,

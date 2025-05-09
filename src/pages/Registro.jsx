@@ -17,7 +17,7 @@ export default function Registro() {
     e.preventDefault();
     setMensaje("");
 
-    const res = await fetch("http://localhost:3000/api/auth/registro", {
+    const res = await fetch("https://realnexor.com/api/auth/registro", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

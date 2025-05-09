@@ -70,7 +70,7 @@ export default function NuevaPropiedad() {
       adjuntos.forEach(file => formData.append("adjuntos", file));
     }
 
-    const res = await fetch("http://localhost:3000/api/propiedades", {
+    const res = await fetch("https://realnexor.com/api/propiedades", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -107,7 +107,7 @@ export default function NuevaPropiedad() {
           <input type="text" name="nombre" placeholder="Nombre" value={form.nombre} onChange={handleChange} className="input" required />
           
           <label htmlFor="ubicacion" className="block text-sm mb-1">Ubicación</label>
-          <input type="text" name="ubicacion" placeholder="Ubicación" value={form.ubicacion} onChange={handleChange} className="input" required />
+          <input type="text" name="ubicacion" placeholder="Ubicación" value={form.ubicacion} onChange={handleChange} className="input"  />
           
           <label htmlFor="numero_finca" className="block text-sm mb-1">Número de Finca</label>
           <input type="text" name="numero_finca" placeholder="Número de Finca" value={form.numero_finca} onChange={handleChange} className="input" />
@@ -137,7 +137,7 @@ export default function NuevaPropiedad() {
             className={` w-full p-3 rounded-md
                bg-white/20 text-white border border-white/30
                 focus:outline-none focus:ring-2 focus:ring-emerald-400 appearance-none `}
-            required
+            
           >
             <option className="text-black" value="">Seleccione estado</option>
             <option className="text-black" value="Disponible">Disponible</option>
@@ -170,19 +170,19 @@ export default function NuevaPropiedad() {
           <label htmlFor="codigo_pago_municipalidad" className="block text-sm mb-1">Código de pago en la municipalidad</label>
           <input type="text" name="codigo_pago_municipalidad" placeholder="Código de pago en la municipalidad" value={form.codigo_pago_municipalidad} onChange={handleChange} className="input" />
           
-          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito</label>
+          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito Electricidad</label>
           <input type="text" name="contrato_electricidad" placeholder="Contrato Electricidad" value={form.contrato_electricidad} onChange={handleChange} className="input" />
-          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito</label>
+          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito Agua</label>
           <input type="text" name="contrato_agua" placeholder="Contrato Agua" value={form.contrato_agua} onChange={handleChange} className="input" />
-          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito</label>  
+          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito Cable</label>  
           <input type="text" name="contrato_cable" placeholder="Contrato Cable" value={form.contrato_cable} onChange={handleChange} className="input" />
-          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito</label>
+          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito Internet</label>
           <input type="text" name="contrato_internet" placeholder="Contrato Internet" value={form.contrato_internet} onChange={handleChange} className="input" />
-          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito</label>
+          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito Otros</label>
           <input type="text" name="contrato_otros" placeholder="Contrato Otros" value={form.contrato_otros} onChange={handleChange} className="input" />
-          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito</label>      
+          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Correos de Referencia</label>      
           <textarea name="correos_referencia" placeholder="Correos de referencia" value={form.correos_referencia} onChange={handleChange} className="input" rows="3"></textarea>
-          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Cuenta bancaria para depósito</label>  
+          <label htmlFor="cuenta_bancaria_deposito" className="block text-sm mb-1">Notas</label>  
           <textarea name="notas" placeholder="Notas" value={form.notas} onChange={handleChange} className="input" rows="3"></textarea>
 
           <label className="block text-sm mb-1">Foto principal</label>

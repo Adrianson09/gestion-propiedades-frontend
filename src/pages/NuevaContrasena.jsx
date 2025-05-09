@@ -13,7 +13,7 @@ export default function NuevaContrasena() {
     setMensaje("");
     setError("");
 
-    const res = await fetch(`http://localhost:3000/api/auth/restablecer/${token}`, {
+    const res = await fetch(`https://realnexor.com/api/auth/restablecer/${token}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nuevaContrasena }),

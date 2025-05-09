@@ -51,7 +51,7 @@ export default function PropiedadDetalle({ propiedad, onActualizar }) {
       formData.append("foto_principal", nuevaFoto);
     }
 
-    const res = await fetch(`http://localhost:3000/api/propiedades/${propiedad.id}`, {
+    const res = await fetch(`https://realnexor.com/api/propiedades/${propiedad.id}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,

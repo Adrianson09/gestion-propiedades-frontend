@@ -9,7 +9,7 @@ export default function Recuperar() {
     e.preventDefault();
     setMensaje("");
 
-    const res = await fetch("http://localhost:3000/api/auth/recuperar", {
+    const res = await fetch("https://realnexor.com/api/auth/recuperar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ correo }),

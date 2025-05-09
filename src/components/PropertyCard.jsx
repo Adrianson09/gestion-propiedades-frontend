@@ -11,7 +11,7 @@ export default function PropertyCard({ propiedad, onEliminar }) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition hover:shadow-lg relative">
       <img
-        src={`http://localhost:3000/uploads/${foto_principal || "placeholder.jpg"}`}
+        src={`https://realnexor.com/uploads/${foto_principal || "placeholder.jpg"}`}
         alt={nombre}
         className="w-full h-48 object-cover"
       />

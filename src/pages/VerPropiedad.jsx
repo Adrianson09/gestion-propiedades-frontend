@@ -24,10 +24,10 @@ export default function VerPropiedad() {
 
   const fetchDatos = async () => {
     try {
-      const resProp = await fetch(`http://localhost:3000/api/propiedades/${id}`, {
+      const resProp = await fetch(`https://realnexor.com/api/propiedades/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
-      const resAdj = await fetch(`http://localhost:3000/api/propiedades/${id}/adjuntos`, {
+      const resAdj = await fetch(`https://realnexor.com/api/propiedades/${id}/adjuntos`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       const dataProp = await resProp.json();
@@ -46,7 +46,7 @@ export default function VerPropiedad() {
     const confirm = window.confirm("¿Seguro que deseas eliminar este archivo?");
     if (!confirm) return;
   
-    const res = await fetch(`http://localhost:3000/api/propiedades/adjuntos/${idAdjunto}`, {
+    const res = await fetch(`https://realnexor.com/api/propiedades/adjuntos/${idAdjunto}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -83,7 +83,7 @@ export default function VerPropiedad() {
 
         {propiedad.foto_principal && (
           <img
-            src={`http://localhost:3000/uploads/${propiedad.foto_principal}`}
+            src={`https://realnexor.com/uploads/${propiedad.foto_principal}`}
             alt={propiedad.nombre}
             className="w-full max-h-96 object-cover rounded-xl shadow mb-6"
           />

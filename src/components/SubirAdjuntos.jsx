@@ -11,7 +11,7 @@ export default function SubirAdjuntos({ propiedadId, onSubido }) {
     const formData = new FormData();
     archivos.forEach((file) => formData.append("adjuntos", file));
 
-    const res = await fetch(`http://localhost:3000/api/propiedades/${propiedadId}/adjuntos`, {
+    const res = await fetch(`https://realnexor.com/api/propiedades/${propiedadId}/adjuntos`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
